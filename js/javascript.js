@@ -12,4 +12,16 @@ $(function() {
     }
 console.log(randomString());
 
+    function Column(name) {
+        var self = this;
+
+        this.id = randomString();
+        this.name = name;
+        this.$element = createColumn();
+
+        function createColumn() {
+            
+        }
+    }
+
 });
