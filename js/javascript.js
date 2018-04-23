@@ -66,6 +66,16 @@ console.log(randomString());
             $cardDelete.click(function(){
                 self.removeCard();
             });
+
+            $card.append($cardDelete);
+            $card.append($cardDescription);
+            return $card;
+        }
+    }
+
+    Card.prototype = {
+        removeCard: function() {
+            this.$element.remove();
         }
     }
 
