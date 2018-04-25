@@ -23,20 +23,19 @@ console.log(randomString());
             var $column = $("<div>").addClass("column");
             var $columnTitle = $("<h2>").addClass("column-title").text(self.name);
             var $columnCardList = $("<ul>").addClass("column-card-list");
-            var $columnDelete = $("<button>").addClass("btn-delete").text("x");
+            var $columnDelete = $("<button>").addClass("column-btn-delete");
             var $columnAddCard = $("<button>").addClass("add-card").text("Add a card");
+            var $columnDeleteSymbol = $("<span  class='far fa-times-circle' aria-hidden='true' aria-hidden='true'></span>");
 
             $columnDelete.click(function() {
                 self.removeColumn();
             });
+            $columnDelete.append($columnDeleteSymbol);
             $columnAddCard.click(function(event) {
                 self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
-            $column.append($columnTitle);
-            $column.append($columnDelete);
-            $column.append($columnAddCard);
-            $column.append($columnCardList);
+            $column.append($columnTitle).append($columnDelete).append($columnAddCard).append($columnCardList);
 
             return $column;
         }
@@ -61,14 +60,15 @@ console.log(randomString());
         function createCard() {
             var $card = $("<li>").addClass("card");
             var $cardDescription = $("<p>").addClass("card-description").text(self.description);
-            var $cardDelete = $("<button>").addClass("btn-delete").text("x");
+            var $cardDelete = $("<button>").addClass("card-btn-delete");
+            var $cardDeleteSymbol = $("<span  class='far fa-times-circle' aria-hidden='true' aria-hidden='true'></span>");
 
             $cardDelete.click(function(){
                 self.removeCard();
             });
 
-            $card.append($cardDelete);
-            $card.append($cardDescription);
+            $cardDelete.append($cardDeleteSymbol);
+            $card.append($cardDelete).append($cardDescription);
             return $card;
         }
     }
