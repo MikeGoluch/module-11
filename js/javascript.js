@@ -29,7 +29,7 @@ console.log(randomString());
             $columnDelete.click(function() {
                 self.removeColumn();
             });
-            $columnAddCard.click(function() {
+            $columnAddCard.click(function(event) {
                 self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
@@ -101,4 +101,22 @@ console.log(randomString());
         }).disableSelection();
     }
 
+
+    // CREATING COLUMNS
+    var todoColumn = new Column('To do');
+    var doingColumn = new Column('Doing');
+    var doneColumn = new Column('Done');
+
+    // ADDING COLUMNS TO THE BOARD
+    board.addColumn(todoColumn);
+    board.addColumn(doingColumn);
+    board.addColumn(doneColumn);
+
+    // CREATING CARDS
+    // var card1 = new Card('New task');
+    // var card2 = new Card('Create kanban boards');
+
+    // ADDING CARDS TO COLUMNS
+    todoColumn.addCard(card1);
+    doingColumn.addCard(card2);
 });
