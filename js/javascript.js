@@ -97,7 +97,8 @@ console.log(randomString());
     function initSortable() {
         $(".column-card-list").sortable({
             connectWith: ".column-card-list",
-            placeholder: "card-placeholder"
+            placeholder: "card-placeholder",
+            dropOnEmpty: true
         }).disableSelection();
     }
 
@@ -113,8 +114,8 @@ console.log(randomString());
     board.addColumn(doneColumn);
 
     // CREATING CARDS
-    // var card1 = new Card('New task');
-    // var card2 = new Card('Create kanban boards');
+    var card1 = new Card('New task');
+    var card2 = new Card('Create kanban boards');
 
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
