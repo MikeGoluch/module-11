@@ -9,11 +9,12 @@ function Phone(brand, price, color) {
 
 
 Phone.prototype.printinfo = function() {
-    this.getWarrantyCost = function() {
-        return 0.1 * this.price;
-    };
     console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ". Extended warranty for this model cost " + this.getWarrantyCost());
 };
+
+Phone.prototype.getWarrantyCost = function() {
+    return 0.1 * this.price;
+}
 
 
 var xiaomiRedmi = new Phone("Xiaomi", 1000, "black");
