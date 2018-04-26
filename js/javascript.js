@@ -29,8 +29,20 @@ $(function() {
                 self.removeColumn();
             });
             $columnDelete.append($columnDeleteSymbol);
+            //tutaj warunek
             $columnAddCard.click(function(event) {
-                self.addCard(new Card(prompt("Enter the name of the card")));
+                var condition = true;
+                while (condition) {
+                    var cardName = prompt("Enter the name of the card");
+                    if (cardName.length > 0) {
+                        var card = new Card(cardName);
+                        self.addCard(card);
+                        condition = false;
+                    } else {
+                        alert("You have to enter a card name!");
+                        condition = true;
+                    }
+                }
             });
 
             $column.append($columnTitle).append($columnDelete).append($columnAddCard).append($columnCardList);
@@ -86,10 +98,22 @@ $(function() {
         $element: $("#board .column-container")
     };
     //event listener
+    //tutaj warunek
     $(".create-column").click(function(){
-        var name = prompt("Enter a column name");
-        var column = new Column(name);
-        board.addColumn(column);
+        var condition = true;
+        while (condition) {
+            var name = prompt("Enter a column name");
+            if (name.length > 0) {
+                var column = new Column(name);
+                board.addColumn(column);
+                condition = false;
+            } else {
+                alert("You have to enter a column name!");
+                condition = true;
+            }
+        }
+        
+        
     });
     //function responsible for drag n drop
     function initSortable() {
