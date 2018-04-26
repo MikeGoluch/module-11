@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900');
+
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+.board {
+    h1,
+    .column-title,
+    .create-column {
+        color: white;
+    }
+    h1 {
+        font-size: 36px;
+        text-shadow: 0px 0px 5px #ff5252, 2px 2px 5px black ;
+        font-weight: bold;
+    }
+    .column-title {
+        font-weight: bold;
+        background-color: #ff5252;
+        margin-top: 0;
+        min-height: 50px;
+        line-height: 50px;
+        text-shadow: 2px 2px 5px black;
+    }
+    .create-column {
+        background-color: #1289A7;
+        text-shadow: 2px 2px 5px black ;
+        box-shadow: 5px 5px 5px #1289A7;
+        border: 1px solid #0652DD;
+        padding: 5px 10px;
+        display: block;
+        margin: 20px auto;
+    }
+    .column-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.column {
+    box-shadow: 5px 5px 10px #ff5252;
+    border: 1px solid #b33939;
+    margin-bottom: 20px;
+    min-height: 400px;
+    min-width: 400px;
+    .column-btn-delete,
+    .card-btn-delete {
+        position: relative;
+        left: 5px;
+        color: white;
+        font-size: 20px;
+        background-color: transparent;
+        border: none;
+    }
+    .column-btn-delete {
+        top: -50px;
+    }
+    .card-btn-delete {
+        top: 5px;
+    }
+    .fa-times-circle {
+        font-weight: bold;
+    }
+    .column-card-list {
+        min-height: 400px;
+        list-style-type: none;
+        .card-description {
+            padding: 5px;
+        }
+        .card {
+            border: 1px solid #009432;
+            min-height: 100px;
+            width: 85%;
+            margin: 20px auto;
+            background-color: #A3CB38;
+            box-shadow: 5px 5px 10px #A3CB38;
+        }
+    }
+    .column-title {
+        text-align: center;
+    }
+    .add-card {
+        background-color: #1289A7;
+        color: white;
+        text-shadow: 2px 2px 5px black ;
+        box-shadow: 5px 5px 5px #1289A7;
+        border: 1px solid #0652DD;
+        padding: 5px 10px;
+    }
+}
+
+
+
+

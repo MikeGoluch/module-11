@@ -1,0 +1,28 @@
+{
+  "name": "module-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:sass": "node-sass --output-style compact -o css scss",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css scss",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css scss --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeGoluch/module-9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeGoluch/module-9/issues"
+  },
+  "homepage": "https://github.com/MikeGoluch/module-9#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2"
+  }
+}
